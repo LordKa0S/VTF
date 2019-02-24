@@ -35,12 +35,14 @@ include("key.php");
 
 	<script>
 		
-		function myfunction(){
+		function myfunction(e){
+			e.preventDefault();
 
 		var encrypt = new JSEncrypt();
 
 		console.log(`<?php echo $pubKey;?>`);
 
+		var x = `<?php echo $pubKey;?>`
 
 		encrypt.setPublicKey(x);
 
