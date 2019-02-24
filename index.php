@@ -33,6 +33,8 @@ include("key.php");
 
 	<script>
 	function myfunction() {
+
+		alert();
 		 var encrypt = new JSEncrypt();
 		 
           encrypt.setPublicKey(<?php echo $pubKey;?>);
