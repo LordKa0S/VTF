@@ -37,7 +37,7 @@ include("key.php");
 		
 		function myfunction(e){
 			//e.preventDefault();
-
+			console.log(e);
 		var encrypt = new JSEncrypt();
 
 		console.log(`<?php echo $pubKey;?>`);
@@ -89,7 +89,7 @@ include("key.php");
 			          <input type="radio" name="candid" value="2">RaGa 
   					  <br>
 			        
-				    <input type ="submit" value="Submit" name="submit" class="waves-effect waves-light btn submitbtn" onclick="myfunction()" />
+				    <button type ="submit" value="Submit" name="submit" class="waves-effect waves-light btn submitbtn" onclick="myfunction()"></button>
 				    
 			</form>
 		</div>
