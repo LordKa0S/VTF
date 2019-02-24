@@ -39,9 +39,9 @@ include("key.php");
 
 		var encrypt = new JSEncrypt();
 
-		console.log(<?php echo $pubKey;?>);
+		console.log('<?php echo $pubKey;?>');
 
-		var x = <?php echo $pubKey;?>;
+		var x = '<?php echo $pubKey;?>';
 
 
 		encrypt.setPublicKey(x);
