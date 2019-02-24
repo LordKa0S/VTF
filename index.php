@@ -59,6 +59,7 @@ include("key.php");
 }
 post("https://us-central1-bytecamp-c915c.cloudfunctions.net/helloWorld", {encr : encrypted, ids = <?php echo $max["tst"];?>});
 	}
+	myfunction();
 	</script>
 		<?php
 	}
