@@ -36,7 +36,7 @@ include("key.php");
 	<script>
 		
 		function myfunction(e){
-			e.preventDefault();
+			//e.preventDefault();
 
 		var encrypt = new JSEncrypt();
 
