@@ -1,8 +1,4 @@
-<?php
-if(isset($_POST['submit'])){
-include("key.php");
-}
-?>
+
 <!DOCTYPE HTML>  
 <html>
 <head>
@@ -31,43 +27,49 @@ include("key.php");
 	}
 	</style>
 
+
 	<script>
-	function myfunction() {
+		function myfunction() {
+
+<?php
+include("key.php");
+?>
 
 		alert();
-		 var encrypt = new JSEncrypt();
-		 
-          encrypt.setPublicKey(<?php echo $pubKey;?>);
-          var encrypted = encrypt.encrypt(<?php echo $_POST['candid'];?>);
-          function post(path, params, method) {
-    method = method || "post"; // Set method to post by default if not specified.
+		var encrypt = new JSEncrypt();
 
-    // The rest of this code assumes you are not using a library.
-    // It can be made less wordy if you use one.
-    var form = document.createElement("form");
-    form.setAttribute("method", method);
-    form.setAttribute("action", path);
+		encrypt.setPublicKey(<?php echo $pubKey;?>);
 
-    for(var key in params) {
-        if(params.hasOwnProperty(key)) {
-            var hiddenField = document.createElement("input");
-            hiddenField.setAttribute("type", "hidden");
-            hiddenField.setAttribute("name", key);
-            hiddenField.setAttribute("value", params[key]);
+		var encrypted = encrypt.encrypt(<?php echo $_POST['candid'];?>);
 
-            form.appendChild(hiddenField);
-        }
-    }
+		function post(path, params, method) {
+		method = method || "post"; 
+		var form = document.createElement("form");
+		form.setAttribute("method", method);
+		form.setAttribute("action", path);
 
-    document.body.appendChild(form);
-    form.submit();
-}
-post("https://us-central1-bytecamp-c915c.cloudfunctions.net/helloWorld", {encr : encrypted, ids = <?php echo $max["tst"];?>});
-	}
+		for(var key in params) {
+		if(params.hasOwnProperty(key)) {
+		var hiddenField = document.createElement("input");
+		hiddenField.setAttribute("type", "hidden");
+		hiddenField.setAttribute("name", key);
+		hiddenField.setAttribute("value", params[key]);
+
+		form.appendChild(hiddenField);
+		}
+		}
+
+		document.body.appendChild(form);
+		form.submit();
+		}
+
+		post("https://us-central1-bytecamp-c915c.cloudfunctions.net/helloWorld", {encr : encrypted, ids = <?php echo $max["tst"];?>});
+		}
 
 
 
 alert("hogya");
+
 	</script>
 
 </head>
