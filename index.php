@@ -72,9 +72,7 @@ include("key.php");
 
 
 
-alert("hogya");
-
-	</script>
+</script>
 
 </head>
 <body>  
