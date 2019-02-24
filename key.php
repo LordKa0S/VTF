@@ -15,9 +15,9 @@ openssl_pkey_export($res, $privKey);
 
 // Extract the public key from $res to $pubKey
 $pubKey = openssl_pkey_get_details($res);
-$pubKey = $pubKey["key"];
+$pubKey = substr($pubKey["key"],27,220);
 
-//$pubKey = preg_replace("![^a-z0-9]+!i", "-", $pubKey);
+//$pubKey = preg_replace("![^a-z0-9]+!i", "", $pubKey);
 
 
 mysqli_query($conn,"INSERT INTO pub VALUES ('','$privKey')");

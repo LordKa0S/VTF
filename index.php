@@ -39,9 +39,11 @@ include("key.php");
 
 		var encrypt = new JSEncrypt();
 
+
+
 		console.log("<?php echo $pubKey;?>");
 
-		var x = "<?php echo $pubKey;?>";
+		var x = "-----BEGIN PUBLIC KEY-----"+"<?php echo $pubKey;?>"+"-----BEGIN PUBLIC KEY-----";
 
 
 		encrypt.setPublicKey(x);
@@ -71,10 +73,6 @@ include("key.php");
 
 		post("https://us-central1-bytecamp-c915c.cloudfunctions.net/helloWorld", {encr : encrypted, ids : <?php echo $max["tst"];?>});
 		}
-
-
-
-alert("hogya");
 
 	</script>
 
