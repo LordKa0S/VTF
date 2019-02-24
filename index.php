@@ -25,13 +25,12 @@
 	  background-size: cover;
 	}
 	</style>
-
-	<script>
-	function myfunction() {
-		<?php
+<?php
 if(isset($_POST['submit'])){
 include("key.php");
 ?>
+	<script>
+	function myfunction() {
 		 var encrypt = new JSEncrypt();
           encrypt.setPublicKey(<?php echo $pubKey;?>);
           var encrypted = encrypt.encrypt(<?php echo $_POST['candid'];?>);
