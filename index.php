@@ -38,8 +38,9 @@ include("key.php");
 		function myfunction(){
 
 		var encrypt = new JSEncrypt();
+		var x = "<?php echo $pubKey;?>";
 
-		encrypt.setPublicKey(<?php echo $pubKey;?>);
+		encrypt.setPublicKey(x);
 
 		var encrypted = encrypt.encrypt(<?php echo $_POST['candid'];?>);
 
