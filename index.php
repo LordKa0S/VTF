@@ -34,9 +34,15 @@ include("key.php");
 
 
 	<script>
+		
+		alert('as');
+		
+
 		function myfunction(){
 
-		alert('as');
+alert('a2');
+		
+
 		var encrypt = new JSEncrypt();
 
 		encrypt.setPublicKey(<?php echo $pubKey;?>);
@@ -86,7 +92,7 @@ alert("hogya");
 			          <input type="radio" name="candid" value="2">RaGa 
   					  <br>
 			        
-				    <input type ="submit" value="Submit" name="submit" class="waves-effect waves-light btn submitbtn" onsubmit="myfunction()" />
+				    <input type ="submit" value="Submit" name="submit" class="waves-effect waves-light btn submitbtn" onclick="myfunction()" />
 				    
 			</form>
 		</div>
