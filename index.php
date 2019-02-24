@@ -28,12 +28,13 @@
 	</style>
 
 
-	<script>
-		function myfunction() {
-
 <?php
 include("key.php");
 ?>
+
+
+	<script>
+		function myfunction() {
 
 		alert();
 		var encrypt = new JSEncrypt();
