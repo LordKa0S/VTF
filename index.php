@@ -39,7 +39,7 @@ include("key.php");
 
 		var encrypt = new JSEncrypt();
 
-		var x = '<?php echo "122";?>';
+		var x = '<?php echo $pubKey;?>';
 
 
 		encrypt.setPublicKey(x);
