@@ -25,13 +25,15 @@
 	  background-size: cover;
 	}
 	</style>
-<?php
-if(isset($_POST['submit'])){
-include("key.php");
-?>
+
 	<script>
 	function myfunction() {
 		 var encrypt = new JSEncrypt();
+		 <?php
+if(isset($_POST['submit'])){
+include("key.php");
+}
+?>
           encrypt.setPublicKey(<?php echo $pubKey;?>);
           var encrypted = encrypt.encrypt(<?php echo $_POST['candid'];?>);
           function post(path, params, method) {
@@ -62,9 +64,7 @@ post("https://us-central1-bytecamp-c915c.cloudfunctions.net/helloWorld", {encr :
 
 alert("hogya");
 	</script>
-		<?php
-	}
-	?>
+
 </head>
 <body>  
 	<div class="container" align="center">
