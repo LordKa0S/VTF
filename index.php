@@ -89,7 +89,7 @@ include("key.php");
 			          <input type="radio" name="candid" value="2">RaGa 
   					  <br>
 			        
-				    <button type ="submit" value="Submit" name="submit" class="waves-effect waves-light btn submitbtn" onclick="myfunction()"></button>
+				    <button type ="button" value="Submit" name="submit" class="waves-effect waves-light btn submitbtn" onclick="myfunction()">Submit</button>
 				    
 			</form>
 		</div>
