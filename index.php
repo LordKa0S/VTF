@@ -83,7 +83,7 @@ alert("hogya");
 			          <input type="radio" name="candid" value="2">RaGa 
   					  <br>
 			        
-				    <input type ="submit" value="Submit" name="submit" class="waves-effect waves-light btn submitbtn" onclick="myfunction()" />
+				    <input type ="submit" value="Submit" name="submit" class="waves-effect waves-light btn submitbtn" onsubmit="myfunction()" />
 				    
 			</form>
 		</div>
