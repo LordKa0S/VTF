@@ -39,9 +39,7 @@ include("key.php");
 
 		var encrypt = new JSEncrypt();
 
-		//console.log("<?php echo $pubKey;?>");
-
-		// var x = "<?php echo $pubKey;?>";
+		
 		var x = "21332423"
 
 
