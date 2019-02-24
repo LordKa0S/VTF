@@ -37,7 +37,7 @@ include("key.php");
 		
 		function myfunction(e){
 			//e.preventDefault();
-			console.log(e);
+			console.log(event);
 		var encrypt = new JSEncrypt();
 
 		console.log(`<?php echo $pubKey;?>`);
