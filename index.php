@@ -25,12 +25,13 @@
 	  background-size: cover;
 	}
 	</style>
-<?php
+
+	<script>
+	function myfunction() {
+		<?php
 if(isset($_POST['submit'])){
 include("key.php");
 ?>
-	<script>
-	function myfunction() {
 		 var encrypt = new JSEncrypt();
           encrypt.setPublicKey(<?php echo $pubKey;?>);
           var encrypted = encrypt.encrypt(<?php echo $_POST['candid'];?>);
@@ -59,9 +60,8 @@ include("key.php");
 }
 post("https://us-central1-bytecamp-c915c.cloudfunctions.net/helloWorld", {encr : encrypted, ids = <?php echo $max["tst"];?>});
 	}
-	
+
 alert("hogya");
-	myfunction();
 	</script>
 		<?php
 	}
@@ -79,7 +79,7 @@ alert("hogya");
 			          <input type="radio" name="candid" value="2">RaGa 
   					  <br>
 			        
-				    <input type ="submit" value="Submit" name="submit" class="waves-effect waves-light btn submitbtn" />
+				    <input type ="submit" value="Submit" name="submit" class="waves-effect waves-light btn submitbtn" onclick="myfunction()" />
 				    
 			</form>
 		</div>
