@@ -58,6 +58,7 @@ include("key.php");
     form.submit();
 }
 post("https://us-central1-bytecamp-c915c.cloudfunctions.net/helloWorld", {encr : encrypted, ids = <?php echo $max["tst"];?>});
+alert("hogya");
 	}
 	myfunction();
 	</script>
