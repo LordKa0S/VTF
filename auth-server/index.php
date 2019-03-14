@@ -34,6 +34,7 @@ include("key.php");
 
 
 	<script>
+
 		
 		function myfunction(e){
 			e.preventDefault();
@@ -45,8 +46,12 @@ include("key.php");
 		var x = `<?php echo $pubKey;?>`
 
 		encrypt.setPublicKey(x);
-
-		var encrypted = encrypt.encrypt(<?php echo $_POST['candid'];?>);
+		var val;
+		if(document.getElementById("mudi").checked)
+  	val = '1';
+  if(document.getElementById("rugu").checked)
+  	val = '2';
+		var encrypted = encrypt.encrypt(val);
 
 		function post(path, params, method) {
 		method = method || "post"; 
@@ -68,13 +73,11 @@ include("key.php");
 		document.body.appendChild(form);
 		form.submit();
 		}
-
-		post("https://us-central1-bytecamp-c915c.cloudfunctions.net/helloWorld", {encr : encrypted, ids : <?php echo $max["tst"];?>});
+		console.log(encrypted);
+		post("http://10.0.7.50:8081", {encr : encrypted, ids : <?php echo $max["tst"];?>});
 		}
 
-
-
-</script>
+	</script>
 
 </head>
 <body>  
@@ -83,10 +86,10 @@ include("key.php");
     	
     			<h3>Election Information</h3>
     			
-			          <input type="radio" name="candid" value="1">Modi
+			          <input type="radio" name="candid" id='mudi' value="1">Modi
  					  <br>
 			        
-			          <input type="radio" name="candid" value="2">RaGa 
+			          <input type="radio" name="candid" id='rugu' value="2">RaGa 
   					  <br>
 			        
 				    <button type ="button" value="Submit" name="submit" class="waves-effect waves-light btn submitbtn" onclick="myfunction(event)">Submit</button>
