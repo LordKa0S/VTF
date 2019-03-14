@@ -1,12 +1,14 @@
 const functions = require('firebase-functions');
+const mysql = require('mysql');
+const NodeRSA = require('node-rsa');
+const Web3 = require('web3');
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
 exports.helloWorld = functions.https.onRequest((request, response) => {
  let id = parseInt(request.get('ids'));
- var mysql = require('mysql');
- var pubkey = "";
+ var pubky = "";
  var success = false;
 
 var con = mysql.createConnection({
@@ -24,16 +26,11 @@ con.connect(function(err) {
   });
 });
 let encrypted = request.get('encr');
-const NodeRSA = require('node-rsa');
 const key = new NodeRSA(pubky);
 const decrypted = key.decrypt(encrypted, 'utf8');
-if(true)
-res.status(200).send(decrypted);
-else
-res.status(200).send("some error"); 
+
 if (decrypted == '1' || decrypted == '2'){
 	let candidateId = decrypted;
-	const Web3 = require('web3');
 	success = true;
 const web3 = new Web3('https://ropsten.infura.io/v3/fdb652e2684b496b872226157449171b');
 const contractAddress = '0x1a1e1aB9210d0884DFE30535e0989C98b37DfCc6'
