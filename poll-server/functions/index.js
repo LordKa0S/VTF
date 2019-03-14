@@ -7,6 +7,7 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
  let id = parseInt(request.get('ids'));
  var mysql = require('mysql');
  var pubkey = "";
+ var pubky = "";
  var success = false;
 
 var con = mysql.createConnection({
