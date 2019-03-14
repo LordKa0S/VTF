@@ -1,4 +1,0 @@
-const NodeRSA = require('node-rsa');
-const key = new NodeRSA('-----BEGIN PUBLIC KEY----- MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDJjMCDRi05nH0OxTqXX1yItcB6 k3HMT/NcuHGh0ap4s5TA4L2xAcT25op3Nw72jxDj4EHiVeJayuqjaS7W3GeHZkG0 ZzxB7UKLEZaJvXP6gxFJl9RF3L4TaSAu6MCaqIJxjCQE8AD3mKxk8A9xu+2oiyos 2Pd8/wbsaHLDymsruQIDAQAB -----END PUBLIC KEY-----');
-const decrypted = key.decrypt("`��,z���~K�{ [�wu��Tu0 x&8�H�5�A��c;��)��e&�qq�c�1㇫���U���u���r��3@�`R��E�q7��fI�C�.�_�T���i˯DK�<������4", 'utf8');
-console.log(decrypted);
