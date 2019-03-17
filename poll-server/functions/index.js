@@ -165,7 +165,7 @@ console.log ( result);
 
 }
 if(success)
-res.status(200).send("You voted");
+  res.status(200).send("You voted");
 else
-res.status(200).send("some error"); 
+  res.status(200).send("some error"); 
 });
