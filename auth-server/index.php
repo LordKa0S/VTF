@@ -6,11 +6,13 @@
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="jsencrypt-master/bin/jsencrypt.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 	<style>
 	body, html {
 	  height: 100%;
 	  margin: 0;
+	  font-family: 'Roboto', sans-serif;
 	}
 
 	.bg {
@@ -82,17 +84,24 @@ include("key.php");
 </head>
 <body>  
 	<div class="container" align="center">
-			<form method="POST" class="form-signin">
+			<form method="POST">
     	
-    			<h3>Election Information</h3>
-    			
-			          <input type="radio" name="candid" id='mudi' value="1">Modi
- 					  <br>
-			        
-			          <input type="radio" name="candid" id='rugu' value="2">RaGa 
-  					  <br>
-			        
-				    <button type ="button" value="Submit" name="submit" class="waves-effect waves-light btn submitbtn" onclick="myfunction(event)">Submit</button>
+    			<h1 >CAST YOUR VOTE</h1>
+    				<table class="table table-striped" >
+				      <tr >
+				        <td><input type="radio" name="candid" id='mudi' value="1">  Narendra Modi<br>
+ 						</td>
+ 					  </tr>
+ 					  <tr>
+				        <td><input type="radio" name="candid" id='rugu' value="2">  Rahul Gandhi<br></td>
+				      </tr>
+				      <tr align="center">
+				        <td><button type ="button" value="Submit" name="submit" class="waves-effect waves-light btn btn-success" onclick="myfunction(event)">Submit
+				        </button>
+						</td>
+					  </tr>				      
+				    
+			        </table>
 				    
 			</form>
 		</div>
