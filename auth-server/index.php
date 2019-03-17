@@ -48,9 +48,9 @@ include("key.php");
 		encrypt.setPublicKey(x);
 		var val;
 		if(document.getElementById("mudi").checked)
-  	val = '1';
-  if(document.getElementById("rugu").checked)
-  	val = '2';
+  			val = '1';
+  		if(document.getElementById("rugu").checked)
+  			val = '2';
 		var encrypted = encrypt.encrypt(val);
 
 		function post(path, params, method) {
@@ -60,21 +60,21 @@ include("key.php");
 		form.setAttribute("action", path);
 
 		for(var key in params) {
-		if(params.hasOwnProperty(key)) {
-		var hiddenField = document.createElement("input");
-		hiddenField.setAttribute("type", "hidden");
-		hiddenField.setAttribute("name", key);
-		hiddenField.setAttribute("value", params[key]);
+			if(params.hasOwnProperty(key)) {
+				var hiddenField = document.createElement("input");
+				hiddenField.setAttribute("type", "hidden");
+				hiddenField.setAttribute("name", key);
+				hiddenField.setAttribute("value", params[key]);
 
-		form.appendChild(hiddenField);
-		}
+				form.appendChild(hiddenField);
+			}
 		}
 
 		document.body.appendChild(form);
 		form.submit();
 		}
 		console.log(encrypted);
-		post("http://10.0.7.50:8081", {encr : encrypted, ids : <?php echo $max["tst"];?>});
+		post("http://10.0.7.50:8081/", {encr : encrypted, ids : <?php echo $max["tst"];?>});
 		}
 
 	</script>
@@ -82,7 +82,7 @@ include("key.php");
 </head>
 <body>  
 	<div class="container" align="center">
-			<form method="POST">
+			<form method="POST" class="form-signin">
     	
     			<h3>Election Information</h3>
     			
