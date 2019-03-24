@@ -8,10 +8,11 @@ Modules :
  4.  Minimalistic UI - Accounting for the extensive demographic, the UI has been kept as minimalistic as it can be for easy understanding.
 
 Tools used:
-  Ethereum
-  Ropston
-  Infura
-  Web3.js
-  Remix (Smart Contract IDE)
-  Firebase
-  Xampp
+•	Ethereum
+•	Ropston
+•	Infura
+•	Web3.js
+•	Remix (Smart Contract IDE)
+•	Firebase
+•	Xampp
+
