@@ -1,0 +1,4 @@
+[submodule "auth-server/jsencrypt-master"]
+	path = auth-server/jsencrypt-master
+	url = https://github.com/travist/jsencrypt.git
+	branch = master
